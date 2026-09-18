@@ -1,0 +1,24 @@
+<app-header titulo="Inicio" icono="car-outline"></app-header>
+
+<!--El primer ion-menu es el menu lateral
+Que dentro tiene un botón para abrir la página plus
+-->
+<ion-menu side="end" menuId="primer-menu" contentId="principal">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-menu-toggle menu="primer-menu">
+      <ion-button [routerLink]="['/plus']">Ir a Plus</ion-button>
+    </ion-menu-toggle>
+  </ion-content>
+</ion-menu>
+
+<ion-content id="principal" class="ion-text-center">
+  <ion-menu-toggle menu="primer-menu">
+    <ion-button>OPEN</ion-button>
+  </ion-menu-toggle>
+</ion-content>

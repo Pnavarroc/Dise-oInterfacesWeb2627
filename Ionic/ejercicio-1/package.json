@@ -1,7 +1,7 @@
 {
-  "name": "01-introduction",
+  "name": "ejercicio-1",
   "version": "0.0.1",
-  "author": "Pablo Navarro",
+  "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -43,5 +43,5 @@
     "typescript-eslint": "^8.61.0",
     "vitest": "^4.0.8"
   },
-  "description": "Mi primer proyecto de Ionic"
+  "description": "An Ionic project"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "01-introduction",
+  "name": "02-componentes",
   "version": "0.0.1",
   "author": "Pablo Navarro",
   "homepage": "https://ionicframework.com/",
@@ -43,5 +43,5 @@
     "typescript-eslint": "^8.61.0",
     "vitest": "^4.0.8"
   },
-  "description": "Mi primer proyecto de Ionic"
+  "description": "Revisión con ejemplos de los componentes de Ionic."
 }
