@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center ion-text-capitalize">Avatar</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-toggle menu="primer menu">
+        <ion-button>
+          <ion-avatar>
+            <ion-img src="https://cdn-icons-png.flaticon.com/512/151/151409.png"></ion-img>
+          </ion-avatar>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <h2>Chips</h2>
+  @for (i of [1,2,3,4,5,6,7,8]; track i) {
+    <ion-chip color="secondary">
+      <ion-avatar>
+        <img src="/assets/icon/favicon.png" alt="...">
+        <ion-label>Chibi</ion-label>
+      </ion-avatar>
+    </ion-chip>
+  }
+
+
+  <h2>Avatar</h2>
+
+  <ion-list>
+    @for ( i of [1,1,1,1]; track  $index) {
+      <ion-item>
+        <ion-avatar slot="end">
+          <img src="/assets/icon/favicon.png" alt="...">
+        </ion-avatar>
+        <ion-label>Chibi end</ion-label>
+      </ion-item>
+    }
+  </ion-list>
+
+</ion-content>

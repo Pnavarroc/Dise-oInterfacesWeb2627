@@ -1,0 +1,21 @@
+<app-header titulo="alert"/>
+
+<ion-content class="ion-padding">
+  <h2>Alert</h2>
+
+  <ion-button color="primary" expand="full" id="mostrar-alert">Mostrar Alert</ion-button>
+
+  <ion-alert trigger="mostrar-alert" header="Titulo del alert" subHeader="subtitulo" message=" Esto es una Alerta"
+  [buttons] = "botonesAlert"></ion-alert>
+
+
+  <h2>Alert con input</h2>
+
+  <ion-button color="secondary" expand="full" id="mostrar-input">Mostrar input</ion-button>
+
+  <ion-alert trigger="mostrar-input" header="Alert con input" subHeader="Inserte el nombre"
+             [buttons] = "botonesInput" [inputs]="inputs"></ion-alert>
+
+
+  <h2>Alert con RadioButton</h2>
+</ion-content>

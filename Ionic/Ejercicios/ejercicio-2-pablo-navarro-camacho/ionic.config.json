@@ -1,0 +1,7 @@
+{
+  "name": "ejercicio-2-pablo-navarro-camacho",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
