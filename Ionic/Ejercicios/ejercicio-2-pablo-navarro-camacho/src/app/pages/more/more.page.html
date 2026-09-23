@@ -6,4 +6,52 @@
 
 <ion-content class="ion-padding">
   <app-grid-home/>
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col>
+        <ion-chip color="dark" id="mostrar-true" (click)="chipSeleccionado= 'true'">
+        <ion-avatar>
+            <img src="/assets/images/anime01.jpg" alt="...">
+          </ion-avatar>
+          <ion-label size="default" color="dark">True</ion-label>
+        </ion-chip>
+      </ion-col>
+
+      <ion-col>
+        <ion-chip color="dark" id="mostrar-false" (click)="chipSeleccionado= 'false'">
+          <ion-avatar>
+            <img src="/assets/images/anime02.jpg" alt="...">
+          </ion-avatar>
+          <ion-label size="default" color="dark">False</ion-label>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p [style.color]="resultado() === 'WIN' ? 'green' : 'red'"
+           style="font-size: 20px;">
+          {{ resultado() }}
+        </p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-alert
+    trigger="mostrar-true"
+    mode="md"
+    header="True or False?"
+    [inputs]="opciones"
+    [buttons]="botones">
+  </ion-alert>
+
+  <ion-alert
+    trigger="mostrar-false"
+    mode="md"
+    header="True or False?"
+    [inputs]="opciones"
+    [buttons]="botones">
+  </ion-alert>
+
 </ion-content>

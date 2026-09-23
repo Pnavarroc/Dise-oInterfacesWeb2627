@@ -11,26 +11,30 @@
     <ion-row>
       <ion-col>
         <ion-avatar>
-          <img src="/assets/images/anime01.jpg" alt="...">
+          <img [src]= "imageAvatar1()" alt="...">
         </ion-avatar>
       </ion-col>
       <ion-col>
         <ion-avatar>
-          <img src="/assets/images/anime02.jpg" alt="...">
+          <img [src]= "imageAvatar2()" alt="...">
         </ion-avatar>
       </ion-col>
       <ion-col>
         <ion-avatar>
-          <img src="/assets/images/anime03.jpg" alt="...">
+          <img [src]= "imageAvatar3()" alt="...">
         </ion-avatar>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col class="ion-text-center">
-        <ion-button  color="success" size="default" fill="outline" shape="round">SELECT YOUR FAVOURITE</ion-button>
+        <ion-button  color="success" size="default" fill="outline" shape="round" id="SelectFavourite">SELECT YOUR FAVOURITE</ion-button>
+        <ion-action-sheet trigger="SelectFavourite" header="Select your Avatar"
+                          [buttons]="SelectFauvorite"></ion-action-sheet>
       </ion-col>
     </ion-row>
 
   </ion-grid>
+
+
 </ion-content>
