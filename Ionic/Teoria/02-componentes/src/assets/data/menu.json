@@ -18,5 +18,20 @@
     "nombre": "Grid y Buttons",
     "ruta": "/grid-buttons",
     "icono": "grid"
+  },
+  {
+    "nombre": "Cards",
+    "ruta": "/card",
+    "icono": "card"
+  },
+  {
+    "nombre": "FAB",
+    "ruta": "/fab",
+    "icono": "car"
+  },
+  {
+    "nombre": "Slides",
+    "ruta": "/slides",
+    "icono": "album"
   }
 ]

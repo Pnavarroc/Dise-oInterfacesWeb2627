@@ -26,4 +26,16 @@ export const routes: Routes = [
     path: 'grid-buttons',
     loadComponent: () => import('./pages/grid-buttons/grid-buttons.page').then( m => m.GridButtonsPage)
   },
+  {
+    path: 'card',
+    loadComponent: () => import('./pages/card/card.page').then( m => m.CardPage)
+  },
+  {
+    path: 'fab',
+    loadComponent: () => import('./pages/fab/fab.page').then( m => m.FabPage)
+  },
+  {
+    path: 'slides',
+    loadComponent: () => import('./pages/slides/slides.page').then( m => m.SlidesPage)
+  },
 ];
