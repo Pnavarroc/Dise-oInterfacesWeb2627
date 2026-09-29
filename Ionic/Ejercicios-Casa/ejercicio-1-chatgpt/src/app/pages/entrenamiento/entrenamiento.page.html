@@ -1,10 +1,37 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>Entrenamiento</ion-title>
+    <ion-title class="ion-text-center">Entrenamiento</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <ion-label  class="ion-display-flex ion-justify-content-center">
+    Energía {{energia()}}
+  </ion-label>
+
+  <ion-label  class="ion-display-flex ion-justify-content-center" [style.color]="estado().color">
+    Estado {{estado().texto}}
+  </ion-label>
+
+  <ion-grid>
+    <ion-row >
+      <ion-col class="ion-text-center">
+        <ion-chip (click)="entrenar(energia())">
+          <ion-label >Entrenar</ion-label>
+        </ion-chip>
+      </ion-col>
+
+      <ion-col class="ion-text-center">
+        <ion-chip (click)="descansar(energia())">
+          <ion-label>Descansar</ion-label>
+        </ion-chip>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-button (click)="reiniciar()" class="ion-display-flex ion-justify-content-center" expand="block" fill="outline" color="success">Reiniciar</ion-button>
+
 
 
 
