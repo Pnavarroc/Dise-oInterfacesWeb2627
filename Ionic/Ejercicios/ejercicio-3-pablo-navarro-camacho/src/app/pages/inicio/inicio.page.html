@@ -1,0 +1,35 @@
+<ion-header class="ion-text-center ion-no-border" >
+  <ion-toolbar color="dark">
+    <ion-title>Ejercicio 3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-fab horizontal="center" vertical="center" slot="fixed">
+    <ion-fab-button color="light">
+      <ion-icon name="add" color="danger"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="start">
+      <ion-fab-button color="primary" routerLink="/cars">
+        <ion-icon name="car-sport"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="top">
+      <ion-fab-button color="secondary" routerLink="/airplanes">
+        <ion-icon name="airplane"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="end">
+      <ion-fab-button color="tertiary" routerLink="/boats">
+        <ion-icon name="boat"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,37 @@
+  <swiper-container>
+
+    <swiper-slide>
+
+      <ion-card mode="md">
+
+        <ion-card-header>
+          <ion-card-title>{{name()}}</ion-card-title>
+          <ion-card-subtitle>
+            <ion-button  fill="solid" size="small" color="{{color()}}">
+              {{model()}}
+            </ion-button>
+          </ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          Motor: {{motor()}}
+          <br>
+          Model: {{model()}}
+        </ion-card-content>
+      </ion-card>
+
+    </swiper-slide>
+
+    <swiper-slide>
+      <ion-card mode="md" style="width: auto; height: 135px">
+        <ion-card-header>
+          <ion-card-title class="ion-text-center" color="success">
+            {{price() | currency : 'EUR'}}
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+
+  </swiper-container>
+
+

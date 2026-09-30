@@ -1,0 +1,9 @@
+<app-header title="Cars" color="primary"/>
+
+<ion-content class="ion-padding">
+
+  @for (vehiculo of vehiculos(); track vehiculo._id) {
+    <app-card color="primary" [name]="vehiculo.name" [model]="vehiculo.model" [motor]="vehiculo.motor" [price]="vehiculo.price"/>
+  }
+
+</ion-content>
