@@ -33,5 +33,20 @@
     "nombre": "Slides",
     "ruta": "/slides",
     "icono": "album"
+  },
+  {
+    "nombre": "Slides2",
+    "ruta": "/slides2",
+    "icono": "ellipsis-horizontal-outline"
+  },
+  {
+    "nombre": "Listas",
+    "ruta": "/list",
+    "icono": "list"
+  },
+  {
+    "nombre": "InfiniteScroll",
+    "ruta": "/infinite-scroll",
+    "icono": "list"
   }
 ]
