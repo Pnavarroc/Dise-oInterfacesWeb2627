@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: '41e9ed99c68e81386e914a59ce7d5f57',
+  baseUrl: 'https://api.themoviedb.org/3',
+  images: '',
+  baseURLZelda: 'https://api.hyrule-compendium.com/v3/compendium/category'
 };
 
 /*

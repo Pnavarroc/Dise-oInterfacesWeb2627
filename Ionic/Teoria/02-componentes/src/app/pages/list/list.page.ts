@@ -8,8 +8,8 @@ import {
   IonImg,
   IonItem, IonItemOption, IonItemOptions, IonItemSliding, IonLabel,
   IonList,
-  IonListHeader,
-  IonTitle,
+  IonListHeader, IonReorder, IonReorderGroup, IonText,
+  IonTitle, IonToggle,
   IonToolbar
 } from '@ionic/angular';
 import {DataService} from "../../services/data-service";
@@ -23,7 +23,7 @@ import {addIcons} from "ionicons";
   selector: 'app-list',
   templateUrl: './list.page.html',
   styleUrls: ['./list.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponentComponent, IonList, IonListHeader, IonItem, IonAvatar, IonImg, IonLabel, IonItemSliding, IonItemOptions, IonItemOption, IonIcon]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponentComponent, IonList, IonListHeader, IonItem, IonAvatar, IonImg, IonLabel, IonItemSliding, IonItemOptions, IonItemOption, IonIcon, IonReorderGroup, IonToggle, IonText, IonReorder]
 })
 export class ListPage implements OnInit {
 
@@ -33,6 +33,7 @@ export class ListPage implements OnInit {
   private readonly dataService: DataService = inject(DataService);
 
   usuarios = signal<Usuario[]>([]);
+  protected habilitado: boolean = true;
 
   constructor() {
     addIcons({shareSocial, heart, call})
@@ -73,4 +74,15 @@ export class ListPage implements OnInit {
   }
 
 
+  protected reordenar(event: any) {
+    console.log(event);
+    this.usuarios.update(items =>{
+      const itemMover = items.splice(event.detail.from, 1) [0];
+      items.splice(event.detail.to, 0,itemMover);
+      return items;
+    });
+    console.log(this.usuarios());
+    event.target.complete();
+  }
 }
+

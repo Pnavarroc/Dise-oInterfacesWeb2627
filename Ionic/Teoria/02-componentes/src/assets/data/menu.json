@@ -47,6 +47,27 @@
   {
     "nombre": "InfiniteScroll",
     "ruta": "/infinite-scroll",
-    "icono": "list"
+    "icono": "infinite"
+  },
+
+  {
+    "nombre": "InfiniteScroll2",
+    "ruta": "/infinite2",
+    "icono": "infinite-outline"
+  },
+  {
+    "nombre": "Modal",
+    "ruta": "/modal",
+    "icono": "phone-portrait"
+  },
+  {
+    "nombre": "Tabs",
+    "ruta": "/tabs",
+    "icono": "cog"
+  },
+  {
+    "nombre": "Tabs Zelda",
+    "ruta": "/tabs2",
+    "icono": "shield"
   }
 ]

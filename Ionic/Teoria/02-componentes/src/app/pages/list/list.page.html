@@ -56,4 +56,26 @@
     }
   </ion-list>
 
+  <ion-list>
+    <ion-list-header>
+      <h2>Lista con Reorder</h2>
+    </ion-list-header>
+    <ion-toggle [(ngModel)]="habilitado"></ion-toggle>
+    <ion-reorder-group [disabled]="!habilitado" (ionItemReorder)="reordenar($event)">
+    @for(user of usuarios(); track user.id){
+      <ion-item>
+        <ion-avatar>
+          <img src="assets/shapes.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{user.name}}</h2>
+          <p><ion-text color="secondary">{{user.company.name}}</ion-text></p>
+        </ion-label>
+
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    }
+    </ion-reorder-group>
+  </ion-list>
+
 </ion-content>

@@ -6,10 +6,10 @@ import {
   americanFootball,
   beaker,
   car,
-  card,
+  card, cog,
   ellipsisHorizontalOutline,
-  grid, list,
-  logoAppleAppstore
+  grid, infinite, infiniteOutline, list,
+  logoAppleAppstore, phonePortrait, shield
 } from "ionicons/icons";
 import {MenuComponent} from "./components/menu/menu.component";
 import {register} from "swiper/element/bundle";
@@ -22,6 +22,6 @@ register()
 })
 export class AppComponent {
   constructor() {
-    addIcons({card, beaker, americanFootball, grid, logoAppleAppstore, car, albums, ellipsisHorizontalOutline, list});
+    addIcons({card, shield,beaker,phonePortrait,cog ,infinite, americanFootball, grid, logoAppleAppstore, car, albums, ellipsisHorizontalOutline, list, infiniteOutline});
   }
 }

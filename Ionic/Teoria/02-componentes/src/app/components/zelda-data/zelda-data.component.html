@@ -1,0 +1,65 @@
+<ion-list>
+  @for (dataZelda of dataZeldaArray(); track dataZelda.id) {
+    <ion-item [id]="'abrir-modal-'+dataZelda.id">
+      <ion-avatar slot="start">
+        <img [src]="dataZelda.image">
+      </ion-avatar>
+
+      <ion-label>
+        <h3>{{ dataZelda.name }}</h3>
+        <p>{{ dataZelda.description | slice: 0: 100 }}...</p>
+      </ion-label>
+
+      <ion-label slot="end">
+        @if (dataZelda.hearts_recovered !== undefined && dataZelda.hearts_recovered >= 0) {
+          @if (dataZelda.hearts_recovered > 0) {
+            @for (
+              item of Array(Math.ceil(dataZelda.hearts_recovered));
+              track $index
+              ) {
+              @if (
+                $last &&
+                Math.ceil(dataZelda.hearts_recovered) !== dataZelda.hearts_recovered
+                ) {
+                <ion-icon
+                  name="heart-half-outline"
+                  color="danger">
+                </ion-icon>
+              } @else {
+                <ion-icon name="heart" color="danger"></ion-icon>
+              }
+            }
+          } @else {
+            <ion-icon name="heart-outline" color="danger"></ion-icon>
+          }
+        }
+      </ion-label>
+    </ion-item>
+
+
+    <ion-modal #modal [trigger]="'abrir-modal-'+dataZelda.id" >
+      <ng-template>
+        <ion-header>
+          <ion-toolbar color="dark">
+            <ion-buttons slot="end">
+              <ion-button (click)="modal.dismiss(null, 'cancel')">Cancel</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content color="dark">
+          <ion-card class="ion-padding">
+            <ion-card-header>
+              <ion-card-title>
+                <h2 class="ion-text-capitalize">{{dataZelda.name}}</h2>
+              </ion-card-title>
+            </ion-card-header>
+            <img [src]="dataZelda.image" alt="">
+            <ion-card-content>
+              <p>{{dataZelda.description}}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  }
+</ion-list>
