@@ -1,0 +1,7 @@
+{
+  "name": "ejercicio-tipo-examen-1-pablo-navarro-camacho",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
