@@ -2,7 +2,7 @@
   <ion-toolbar color="primary" class="ion-padding">
     <ion-title> Valorant </ion-title>
     <ion-avatar slot="end" id="abrir-modal">
-      <img  [src]="agents()[13]?.displayIcon"/>
+      <img  [src]="agents()[13]?.displayIcon"/> <!--Ponerlo en una signal en evz de poner este tocho-->
     </ion-avatar>
   </ion-toolbar>
 </ion-header>
@@ -19,7 +19,7 @@
             </ion-avatar>
             <ion-label>
               <h3>{{agent.displayName}}</h3>
-              <p class="description">{{agent.description }}...</p>
+              <p class="description">{{agent.description }}</p>
             </ion-label>
 
           </ion-item>

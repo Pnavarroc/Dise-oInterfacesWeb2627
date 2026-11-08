@@ -1,0 +1,30 @@
+<ion-content>
+  <swiper-container pagination="true" style="height: 100%">
+    @for (slide of slides; track $index) {
+      <swiper-slide>
+        <ion-grid style="height: 100%">
+          <ion-row
+            class="ion-align-items-center ion-justify-content-center"
+            style="height: 100%"
+          >
+            <ion-col size="12" class="ion-text-center ion-padding">
+              <img [src]="slide.image" width="150" alt="">
+
+              <p>
+                <ion-text [color]="slide.textColor">
+                  {{ slide.description }}
+                </ion-text>
+              </p>
+
+              @if ($last) {
+                <ion-button color="success" routerLink="/listas">
+                  Empezar
+                </ion-button>
+              }
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </swiper-slide>
+    }
+  </swiper-container>
+</ion-content>
