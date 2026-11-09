@@ -1,0 +1,22 @@
+<ion-menu side="start" menuId="menu-lateral" contentId="principal">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Mi catálogo
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-avatar>
+      <img src="assets/icon/favicon.png" alt="Avatar de Pablo">
+    </ion-avatar>
+
+    <p>Pablo — Repaso Ionic</p>
+
+    <ion-menu-toggle menu="menu-lateral">
+      <ion-item [button]="true" (click)="showTotal(totalMateriales())">
+        <ion-label>Ver total</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+  </ion-content>
+</ion-menu>

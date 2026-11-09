@@ -1,0 +1,66 @@
+<app-menu [totalMateriales]="materials().length"/>
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Materials</ion-title>
+    <ion-menu-toggle menu="menu-lateral" slot="start" auto-hide="false" >
+      <ion-avatar>
+        <img src="assets/icon/favicon.png">
+      </ion-avatar>
+    </ion-menu-toggle>
+    <ion-button slot="end" (click)="showMessage()">
+      <ion-icon name="information-circle-outline">
+      </ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" id="principal">
+  <ion-list>
+    @for(material of materials(); track material.id){
+      <ion-item [id]="'modal-' + material.id">
+        <ion-avatar slot="start">
+          <img [src]="material.image">
+        </ion-avatar>
+        <ion-label>
+          {{material.name}}
+          <p>{{material.description }}</p>
+        </ion-label>
+
+        <ion-modal #miModal [trigger]="'modal-'+material.id">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-title>
+                  Detalle del material
+                </ion-title>
+                <ion-button slot="start" (click)="miModal.dismiss(showName(material.name))">Aceptar</ion-button>
+                <ion-button slot="end" (click)="miModal.dismiss()">Cancelar</ion-button>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-col>
+                <ion-row size="12">
+                  <img [src]="material.image">
+                </ion-row>
+                <ion-row size="12"><ion-label>{{material.name}}</ion-label></ion-row>
+                <ion-row size="12"><ion-text>{{material.description}}</ion-text></ion-row>
+              </ion-col>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
+      </ion-item>
+    }
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="ion-text-center">
+      El número de materiales es:
+      <strong>{{ materials().length }}</strong>
+    </p>
+  </ion-toolbar>
+</ion-footer>
