@@ -1,0 +1,23 @@
+<app-header-component title="Perfil" icon="person-circle-outline"/>
+
+<ion-content class="ion-padding">
+
+  <div class="ion-text-center">
+    <ion-avatar id="modificar-imagen">
+      <img [src]="imagen()">
+    </ion-avatar>
+    <ion-label>{{nombre()}}</ion-label>
+    <ion-button id="mostrar-alert">Cambiar nombre</ion-button>
+  </div>
+  <ion-alert trigger="mostrar-alert" [header]="nombre()" subHeader="inserte un nuevo nombre"
+             [inputs]="inputs" [buttons]="botonesInput">
+  </ion-alert>
+
+  <ion-action-sheet
+    trigger="modificar-imagen"
+    header="Elige tu avatar"
+    [buttons]="actionSheetButtons"></ion-action-sheet>
+
+</ion-content>
+
+

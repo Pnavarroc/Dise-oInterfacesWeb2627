@@ -1,0 +1,23 @@
+<ion-content class="ion-padding">
+  <img [src]="dog().message" alt="" class="round">
+  <ion-button expand="block" color="secondary" (click)="loadDog()">RANDOM</ion-button>
+  <ion-button expand="block" color="success" routerLink="/cats">GO TO CATS</ion-button>
+
+  <ion-list>
+    <ion-list-header><h2>Thumbnails</h2></ion-list-header>
+    @for (i of [1,1,1,1]; track $index){
+      <ion-item >
+        <ion-chip slot="end">
+          <ion-avatar>
+            <img
+              src="/assets/shapes.svg">
+          </ion-avatar>
+
+        </ion-chip>
+        <ion-label>Chibi End</ion-label>
+      </ion-item>
+    }
+
+  </ion-list>
+
+</ion-content>

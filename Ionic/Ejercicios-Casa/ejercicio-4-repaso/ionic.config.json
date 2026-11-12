@@ -1,0 +1,7 @@
+{
+  "name": "ejercicio-4-repaso",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,28 @@
+<ion-header >
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center">productos-infinite</ion-title>
+    <ion-button slot="end" routerLink="/publicaciones">Publicaciones</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    @for(prod of productsShow(); track prod.id){
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="prod.thumbnail">
+        </ion-avatar>
+        <ion-label>
+          {{prod.title}}
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
+  <ion-infinite-scroll
+    [disabled]="products().length === 0"
+    (ionInfinite)="loadMore($event)">
+      <ion-infinite-scroll-content loadingSpinner="dots" loading-text="cargando...">
+
+      </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

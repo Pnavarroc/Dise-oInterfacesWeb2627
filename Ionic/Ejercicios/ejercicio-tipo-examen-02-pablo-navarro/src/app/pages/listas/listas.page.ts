@@ -63,13 +63,13 @@ export class ListasPage implements OnInit {
   }
 
   protected randomNumber() {
-    this.number.set(Math.floor(Math.random() * (this.materials().length - 1) + 1));
+    this.number.set(Math.floor(Math.random() * this.materials().length ));
   }
 
   protected mostrarCancel() {
     this.toastService.showToast('Cancelado', 'bottom', 'danger', 2000);
   }
   protected mostrarAceptar(num: number) {
-    this.toastService.showToast('Aceptado: '+this.materials()[num].name, 'bottom', 'danger', 2000);
+    this.toastService.showToast('Aceptado: '+this.materials()[num].name, 'bottom', 'primary', 2000);
   }
 }

@@ -1,0 +1,7 @@
+{
+  "name": "clase-repaso",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

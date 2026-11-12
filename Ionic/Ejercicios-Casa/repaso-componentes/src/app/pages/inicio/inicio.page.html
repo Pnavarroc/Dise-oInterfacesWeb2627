@@ -1,0 +1,61 @@
+<app-header-component title="Inicio" icon="home-outline"/>
+
+<ion-content class="ion-padding" >
+  <h1 class="ion-text-center">¿Que quieres hacer?</h1>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>
+            <ion-icon name="leaf-outline"></ion-icon>
+          </ion-card-subtitle>
+          <ion-card-title>
+            Materiales
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label>
+            Consulta los materiales de Hyrule
+          </ion-label>
+          <ion-button routerLink="/materiales">
+            Ver materiales
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-card-title>
+            Mi perfil
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label>
+            Personaliza tu nombre y tu avatar
+          </ion-label>
+          <ion-button color="secondary" routerLink="/perfil">
+            editar perfil
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-fab horizontal="end" vertical="bottom">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="success" routerLink="/materiales">
+        <ion-icon name="leaf-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="tertiary" routerLink="/perfil">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

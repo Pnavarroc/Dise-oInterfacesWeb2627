@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title class="ion-text-center">Publicaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    @for(publi of publicacionesShow(); track publi.id){
+      <ion-item>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{publi.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{publi.body}}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    }
+  </ion-list>
+
+  <ion-infinite-scroll
+    [disabled]="publicaciones().length === 0"
+    (ionInfinite)="loadMore($event)"
+  >
+    <ion-infinite-scroll-content loadingSpinner="dots" loading-text="Esperando datos..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

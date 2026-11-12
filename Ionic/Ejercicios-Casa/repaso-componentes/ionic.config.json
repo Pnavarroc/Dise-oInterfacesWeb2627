@@ -1,0 +1,7 @@
+{
+  "name": "repaso-componentes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

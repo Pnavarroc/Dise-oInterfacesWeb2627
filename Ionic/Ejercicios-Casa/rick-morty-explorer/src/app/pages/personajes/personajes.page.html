@@ -1,0 +1,55 @@
+<app-header title="Personajes"/>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" fill="solid" color="primary" (click)="loadCharacters()">Todos</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" fill="outline" color="primary" (click)="loadAlives()">Vivos</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" fill="clear" color="primary" (click)="loadDeads()">Muertos</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-label class="ion-text-center">Mostrando: {{ characters().length }}</ion-label>
+    <ion-row>
+    @for(char of characters(); track char.id){
+        <ion-col size="6">
+          <ion-card>
+            <ion-card-header>
+              <img [src]="char.image">
+              <ion-card-title>{{char.name}}</ion-card-title>
+              <ion-card-subtitle>{{char.species}}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-label>
+                @if(char.status == "Alive"){
+                  <p><ion-text color="success">{{char.status}}</ion-text></p>
+                } @else if (char.status == "Dead"){
+                  <p><ion-text color="danger">{{char.status}}</ion-text></p>
+                }@else{
+                  <p><ion-text color="medium">{{char.status}}</ion-text></p>
+                }
+                {{char.gender}}
+              </ion-label>
+              <ion-button size="small" shape="round" [id]="'abrir-alert-'+char.id">
+                información
+              </ion-button>
+              <ion-alert [trigger]="'abrir-alert-'+char.id"
+                         [header]="char.name"
+                         [subHeader]="char.origin.name"
+                         [message]="char.location.name"
+                         [buttons]="botonesAlert">
+              </ion-alert>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+    }
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

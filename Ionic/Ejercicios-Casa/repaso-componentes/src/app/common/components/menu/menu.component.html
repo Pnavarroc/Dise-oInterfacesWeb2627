@@ -1,0 +1,31 @@
+<ion-menu menuId="menu-lateral" contentId="principal" slot="start">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Repaso Ionic
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item [button]="true" routerLink="/inicio">
+        <ion-label slot="start">Inicio</ion-label>
+        <ion-button slot="end">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item [button]="true" routerLink="/materiales">
+        <ion-label slot="start">Materiales</ion-label>
+        <ion-button slot="end">
+          <ion-icon name="leaf-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item [button]="true" routerLink="/perfil">
+        <ion-label slot="start">Perfil</ion-label>
+        <ion-button slot="end">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

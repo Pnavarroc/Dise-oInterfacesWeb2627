@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Galería</ion-title>
+    <ion-button slot="end" routerLink="/inicio">Inicio</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <swiper-container pagination="true">
+    @for(agent of agents(); track agent.uuid){
+      <swiper-slide >
+        <ion-card>
+          <ion-card-header>
+            <img [src]="agent.fullPortrait">
+            <ion-card-title>{{agent.displayName}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>{{agent.description}}</ion-label>
+            <ion-button (click)="showToast(agent)">Ver nombre</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+    }
+  </swiper-container>
+</ion-content>

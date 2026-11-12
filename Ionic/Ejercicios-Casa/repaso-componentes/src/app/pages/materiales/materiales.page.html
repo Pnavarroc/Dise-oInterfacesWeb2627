@@ -1,0 +1,24 @@
+<app-header-component title="Materiales" icon="leaf-outline"/>
+
+<ion-content class="ion-padding" id="principal">
+  <ion-list>
+    @for(material of materials(); track material.id){
+      <ion-item (click)="showName(material.name)">
+        <ion-avatar slot="start">
+          <img [src]="material.image">
+        </ion-avatar>
+        <ion-label>
+          {{material.name}}
+          {{material.description}}
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    Total: {{materials().length}} materiales
+  </ion-toolbar>
+</ion-footer>
+
