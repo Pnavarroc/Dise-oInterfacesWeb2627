@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Alert</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-display-flex ion-justify-content-center">
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/AmongUs.jpg">
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button id="abrir-alert">Eliminar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-alert trigger="abrir-alert" header="Eliminar agente" message="¿Quieres eliminar este agente de la lista?"
+    [buttons]="buttonsAlert"
+  ></ion-alert>
+
+
+  <ion-label>{{nombre()}}</ion-label>
+  <ion-button id="abrir-alert-input">Editar nombre</ion-button>
+
+  <ion-alert trigger="abrir-alert-input" [header]="nombre()" message="¿Quieres modificar el nombre?"
+             [buttons]="buttonsAlertInput"
+             [inputs]="inputs"
+  ></ion-alert>
+
+
+
+</ion-content>

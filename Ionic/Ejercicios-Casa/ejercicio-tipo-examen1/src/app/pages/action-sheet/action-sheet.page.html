@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ActionSheet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-display-flex ion-justify-content-center">
+    <ion-avatar>
+      <img [src]="foto()">
+    </ion-avatar>
+  </div>
+  <div class="ion-display-flex ion-justify-content-center ion-margin-top">
+    <ion-button id="abrir-action-sheet" class="ion-text-center">Cambiar imagen</ion-button>
+  </div>
+  <ion-action-sheet trigger="abrir-action-sheet" header="Cambiar avatar" [buttons]="actionSheetButtons"></ion-action-sheet>
+</ion-content>
